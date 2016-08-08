@@ -69,7 +69,7 @@ def check_link_mode(container_uri, service_uri, api_auth):
         reason = ""
         try:
             try:
-                docker = docker_client()
+                docker = docker_client(version='auto')
             except:
                 docker = docker_client(os.environ)
             docker.ping()
